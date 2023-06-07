@@ -1,0 +1,40 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++.exe build active file",
+			"command": "D:/programs/mingw64/bin/g++.exe",
+			"args": [
+				"-o",
+				"-I",
+				"${fileDirname}\\*.cpp",
+				"${fileDirname}\\control\\*.cpp",/* custom to ur folder */
+				"${fileDirname}\\model\\*.cpp",/*  */
+				"${fileDirname}\\view\\*.cpp",/*  */
+				"D:\\programs\\mingw64\\include\\glad.c",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe",
+				"-lglfw3",
+				"-lopengl32",
+				"-lgdi32",
+				"D:\\programs\\mingw64\\lib\\libglfw3.a",
+				"D:\\programs\\mingw64\\lib\\libglfw3dll.a",
+				"D:\\programs\\mingw64\\lib\\libfreetype.a",/*  */
+				"D:\\programs\\mingw64\\x86_64-w64-mingw32\\lib\\libgdi32.a",
+				"D:\\programs\\mingw64\\x86_64-w64-mingw32\\lib\\libopengl32.a"
+			],
+			"options": {
+				"cwd": "D:/programs/mingw64/bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: D:/programs/mingw64/bin/g++.exe"
+		}
+	]
+}
